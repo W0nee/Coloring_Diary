@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
 app.use("/", require("./routes/main"));
-app.use("/auth", require("./routes/auth"));
+app.use("/users", require("./routes/users"));
 
 const port = 3000;
 app.listen(port, () => {

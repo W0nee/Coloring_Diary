@@ -6,7 +6,7 @@ passport.use(
     {
       clientID: "omznwi_wBQ4F48d6SAq5",
       clientSecret: "AI5ks57hhI",
-      callbackURL: "/auth/naver/callback",
+      callbackURL: "/users/login/naver/callback",
       passReqToCallback: true,
     },
     (req, accessToken, refreshToken, profile, done) => {
