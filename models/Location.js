@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 let locationSchema = mongoose.Schema({
   first_area: { type: String },
   second_area: { type: String },
-  third_area: { type: String },
+  // third_area: { type: String },
 });
 
 let Location = mongoose.model("locations", locationSchema);
