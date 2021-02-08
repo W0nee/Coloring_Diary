@@ -3,5 +3,6 @@
 <% if(!isAuthenticated){ %>
 <a href="users/login">Login</a>
 <% } else { %>
+<p>Welcome <%= currentUser.displayName %></p>
 <a href="users/logout">Logout</a>
 <% } %>

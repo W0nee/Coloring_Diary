@@ -1,5 +1,6 @@
 const passport = require("passport");
 const NaverStrategy = require("passport-naver").Strategy;
+let User = require("../models/User");
 
 passport.use(
   new NaverStrategy(
@@ -11,8 +12,19 @@ passport.use(
     },
     (req, accessToken, refreshToken, profile, done) => {
       console.log("profile: ", profile);
-      var user = profile;
-      done(null, user);
+
+      User.findOne({ id: profile.id }, (err, user) => {
+        if (err) res.send(err);
+        if (user) {
+          done(null, user);
+        } else {
+          let newUser = new User({ id: profile.id, displayName: profile.displayName });
+          newUser.save((err, user) => {
+            if (err) res.send(err);
+            done(null, user);
+          });
+        }
+      });
     }
   )
 );

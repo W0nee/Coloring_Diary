@@ -16,11 +16,11 @@ router.get("/logout", (req, res) => {
 router.get("/login/google", googlePassport.authenticate("google", { scope: ["profile"] }));
 router.get("/login/google/callback", googlePassport.authenticate("google"), authSuccess);
 
-router.get("/login/naver", naverPassport.authenticate("naver", { scope: ["profile"] }));
-router.get("/login/naver/callback", naverPassport.authenticate("naver"), authSuccess);
-
 router.get("/login/kakao", kakaoPassport.authenticate("kakao", { scope: ["profile"] }));
 router.get("/login/kakao/callback", kakaoPassport.authenticate("kakao"), authSuccess);
+
+router.get("/login/naver", naverPassport.authenticate("naver", { scope: ["profile"] }));
+router.get("/login/naver/callback", naverPassport.authenticate("naver"), authSuccess);
 
 function authSuccess(req, res) {
   res.redirect("/");
