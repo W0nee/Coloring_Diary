@@ -1,9 +1,7 @@
 <h1>Main Page</h1>
 
-<% if(!user){ %>
+<% if(!isAuthenticated){ %>
 <a href="users/login">Login</a>
 <% } else { %>
-<!-- <p>Welcome <%= user._json.sub %></p> -->
-<p>Welcome <%= user.displayName %></p>
 <a href="users/logout">Logout</a>
 <% } %>

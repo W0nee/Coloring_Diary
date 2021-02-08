@@ -1,5 +1,6 @@
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth2").Strategy;
+let User = require("../models/User");
 
 passport.serializeUser((user, done) => {
   done(null, user);
@@ -19,8 +20,19 @@ passport.use(
     },
     (req, accessToken, refreshToken, profile, done) => {
       console.log("profile: ", profile);
-      var user = profile;
-      done(null, user);
+
+      User.findOne({ id: profile.id }, (err, user) => {
+        if (err) res.send(err);
+        if (user) {
+          done(null, user);
+        } else {
+          let newUser = new User({ id: profile.id, displayName: profile.displayName });
+          newUser.save((err, user) => {
+            if (err) res.send(err);
+            done(null, user);
+          });
+        }
+      });
     }
   )
 );

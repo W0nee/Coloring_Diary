@@ -28,12 +28,17 @@ app.use(passport.session());
 app.set("view engine", "ejs");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use((req, res, next) => {
+  res.locals.isAuthenticated = req.isAuthenticated();
+  res.locals.currentUser = req.user;
+  next();
+});
 
 // Routes
 app.use("/", require("./routes/main"));
 app.use("/users", require("./routes/users"));
 
-const port = 3000;
+const port = 5000;
 app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`);
 });
