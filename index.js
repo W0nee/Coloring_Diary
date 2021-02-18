@@ -10,7 +10,9 @@ mongoose.set("useNewUrlParser", true);
 mongoose.set("useFindAndModify", false);
 mongoose.set("useCreateIndex", true);
 mongoose.set("useUnifiedTopology", true);
-mongoose.connect(process.env.MONGO_DB);
+mongoose.connect("mongodb+srv://park:park123@cluster0.4bvqg.mongodb.net/coloring_diary?retryWrites=true&w=majority");
+// mongoose.connect("process.env.MONGO_DB");
+
 let db = mongoose.connection;
 db.once("open", () => {
   console.log("DB Connected");
@@ -37,6 +39,7 @@ app.use((req, res, next) => {
 // Routes
 app.use("/", require("./routes/main"));
 app.use("/users", require("./routes/users"));
+app.use("/diary", require("./routes/diary"));
 
 const port = 5000;
 app.listen(port, () => {

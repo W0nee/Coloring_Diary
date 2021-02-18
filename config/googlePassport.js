@@ -26,8 +26,13 @@ passport.use(
         if (user) {
           done(null, user);
         } else {
-          let newUser = new User({ id: profile.id, displayName: profile.displayName });
-          newUser.save((err, user) => {
+          // let newUser = new User({ id: profile.id, displayName: profile.displayName });
+          // newUser.save((err, user) => {
+          //   if (err) res.send(err);
+          //   done(null, user);
+          // });
+
+          User.create({ id: profile.id, displayName: profile.displayName }, (err, user) => {
             if (err) res.send(err);
             done(null, user);
           });
