@@ -20,6 +20,11 @@ passport.use(
     },
     (req, accessToken, refreshToken, profile, done) => {
       console.log("profile: ", profile);
+      // console.log("json stringify");
+      // console.log(JSON.stringify(profile));
+      // console.log("json parse");
+      // let test = JSON.parse(JSON.stringify(profile));
+      // console.log(test.name.givenName + " " + test.name.familyName);
 
       User.findOne({ id: profile.id }, (err, user) => {
         if (err) res.send(err);

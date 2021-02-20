@@ -45,3 +45,7 @@ const port = 5000;
 app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`);
 });
+
+app.get("/test", (req, res) => {
+  res.render("test_view");
+});

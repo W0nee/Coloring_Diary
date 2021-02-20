@@ -12,6 +12,7 @@ let fileSchema = mongoose.Schema({
 
 let File = mongoose.model("files", fileSchema);
 
+// 파일 인스턴스 생성
 File.createNewInstance = async function (file) {
   return await File.create({
     originalFileName: file.originalname,

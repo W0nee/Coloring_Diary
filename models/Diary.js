@@ -11,6 +11,9 @@ let diarySchema = mongoose.Schema({
   emotion: { type: String },
   content: { type: String },
   attachment: [{ type: mongoose.Schema.Types.ObjectId, ref: "files" }],
+  start_year: { type: Number },
+  start_month: { type: Number },
+  start_day: { type: Number },
 });
 
 diarySchema.pre("save", async function (next) {
