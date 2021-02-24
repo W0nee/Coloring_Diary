@@ -1,0 +1,192 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.titleText {
+  font: bold;
+  font-size: 18px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #4f4f4f;
+}
+
+.text {
+  font-size: 13px;
+}
+
+#RecordPageBlock {
+  width: 360px;
+  height: 760px;
+  border: solid 3px #c9c9c9;
+  background-color: #ffffff;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#TitleBlock {
+  width: 100%;
+  height: 6%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 5%;
+}
+
+#backbtn {
+  width: 10%;
+  height: 70%;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.titleText {
+  width: 80%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#savebtn {
+  width: 10%;
+  height: 70%;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+#RecordBlock {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(rgba(138, 135, 135, 0.2) 0%, rgba(182, 182, 184, 0.1) 2%, rgba(255, 255, 255, 1) 100%);
+}
+
+#Date {
+  width: 90%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+#calendar {
+  display: block;
+  position: absolute;
+  margin: 3% 0% 0% 15%;
+}
+
+.date {
+  width: 80%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+}
+
+#startDate {
+  width: 40%;
+  height: 35%;
+  margin: 5% 0% 0% 0%;
+  padding: 2% 2% 3% 2%;
+  border-radius: 4px;
+  border: solid 1px #bdbdbd;
+}
+
+#endDate {
+  width: 40%;
+  height: 35%;
+  margin: 5% 0% 0% 12%;
+  padding: 2% 2% 3% 2%;
+  border-radius: 4px;
+  border: solid 1px #bdbdbd;
+}
+
+#Title {
+  width: 90%;
+  height: 8%;
+  display: flex;
+  flex-direction: row;
+  margin: 3% auto;
+  border-radius: 4px;
+  border: solid 1px #bdbdbd;
+}
+
+#Record {
+  width: 90%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  border-radius: 4px;
+  border: solid 1px #bdbdbd;
+}
+
+#PlaceBlock {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+}
+
+#Place {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  border: 0;
+}
+
+#map {
+  width: 10%;
+  height: 70%;
+  margin-top: 2%;
+}
+
+#content {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  border: 0;
+}
+
+#emojigroup {
+  width: 70%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  margin: 2% 15% 2% 15%;
+}
+
+#emoji {
+  width: 20%;
+  height: 90%;
+}
+
+#ImageBlock {
+  width: 95%;
+  height: 3%;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 2% 0% 2% 5%;
+}
+
+#clip {
+  padding: 2% 0% 0% 10%;
+}

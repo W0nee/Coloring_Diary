@@ -122,4 +122,4 @@ dist
 .pnp.*
 
 # .ignore
-uploadedFiles
+./public/uploadedFiles

@@ -1,0 +1,47 @@
+*{margin: 0px; padding: 0px;}
+ul{list-style: none;}
+a{text-decoration: none;}
+
+#btngroup{
+    width: 100%;
+    height: 8.6%;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+}
+
+.home{
+    width: 25%;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.write{
+    width: 25%;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.see{
+    width: 25%;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.myPage{
+    width: 25%;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background-color: #ffffff;
+    cursor: pointer;
+}

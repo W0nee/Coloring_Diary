@@ -1,6 +1,38 @@
-<h1>Auth Page</h1>
-<a href="login/google">Google Login</a></button>
-<a href="login/kakao">Kakao Login</a>
-<a href="login/naver">Naver Login</a>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/login.css" />
 
-
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+      span {
+        font: bold 14px "Noto Sans KR", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="LoginPageBlock">
+      <div id="LogoImgBlock">
+        <img src="/images/Rectangle1.svg" alt="logo" />
+      </div>
+      <div id="LogoBlock">
+        <img src="/images/Travel.svg" alt="travel" />
+      </div>
+      <div id="btngroup">
+        <button id="kakaoLogin" onclick="location.href='login/kakao'">
+          <img class="icon" src="/images/kakaologo.svg" className="icon" alt="kakao" />
+          <span className="buttonText">카카오톡으로 로그인하기</span>
+        </button>
+        <button id="naverLogin" onclick="location.href='login/naver'">
+          <img class="icon" src="/images/naverlogo.svg" className="icon" alt="naver" />
+          <span className="buttonText">네이버로 로그인하기</span>
+        </button>
+        <button id="googleLogin" onclick="location.href='login/google'">
+          <img class="icon" src="/images/googlelogo.png" alt="google" />
+          <span className="buttonText">구글로 로그인하기</span>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

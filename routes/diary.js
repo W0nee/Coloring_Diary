@@ -1,13 +1,21 @@
 const express = require("express");
 const router = express.Router();
 const multer = require("multer"); // 1
-const upload = multer({ dest: "uploadedFiles/" });
+const storage = multer.diskStorage({
+  destination(req, file, cb) {
+    cb(null, "public/uploadedFiles/");
+  },
+  filename(req, file, cb) {
+    cb(null, `${Date.now()}__${file.originalname}`);
+  },
+});
+const upload = multer({ storage: storage });
 let Diary = require("../models/Diary");
 let File = require("../models/File");
 
 // 글 작성
 router.get("/write", (req, res) => {
-  res.render("write");
+  res.render("diary/write");
 });
 
 // 글 저장
@@ -34,12 +42,11 @@ router.post("/save", upload.array("attachment"), async function (req, res) {
         attachment[i].save();
       }
     }
-
-    console.log("successful save");
+    console.log("save");
     console.log(result);
-  });
 
-  res.render("upload", { files: req.files });
+    res.render("diary/list", { diary: result });
+  });
 });
 
 // 글 삭제
@@ -50,13 +57,28 @@ router.post("/delete", (req, res) => {
 });
 
 // 글 필터 (이모지 + 최신순)
-router.get("/filter/:emotion", (req, res) => {
-  Diary.find({ emotion: req.params.emotion })
+// router.get("/filter/:emotion", (req, res) => {
+//   Diary.find({ emotion: req.params.emotion })
+//     .populate("attachment")
+//     .sort({ start_year: -1, start_date: -1, steart_day: -1 })
+//     .exec((err, results) => {
+//       if (err) res.send(err);
+//       res.render("diary/list", { results: results });
+//     });
+// });
+
+// 보기
+router.get("/:id", (req, res) => {
+  console.log("show");
+  console.log(req.params);
+
+  Diary.findOne({ _id: req.params.id })
     .populate("attachment")
-    .sort({ start_year: -1, start_date: -1, steart_day: -1 })
-    .exec((err, results) => {
+    .exec((err, result) => {
       if (err) res.send(err);
-      res.render("list", { results: results });
+      // console.log(result);
+
+      res.render("diary/show", { diary: result });
     });
 });
 

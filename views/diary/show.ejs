@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>recordView</title>
+    <h1>SHOW PAGE</h1>
+    <link rel="stylesheet" type="text/css" href="/css/recordView.css" />
+  </head>
+  <body>
+    <div id="entire">
+      <div id="backimage">
+        <img id="backimage" src="/uploadedFiles/<%= diary.attachment[0].serverFileName %>"></span>
+      </div>
+      <div id="title">
+        <h1 id="imoge"><%= diary.emotion %><text id="날짜"><%= diary.start_date %></text></h1>
+        <h1 id="제목"><text id="reatltitle"><%= diary.title %></text></h1>
+        <h4 id="detailplace"><text id="where"><%= diary.location %></text></h4>
+        <hr id="line" class="four" />
+      </div>
+      <div id="내용"><%= diary.content %></div>
+    </div>
+  </body>
+</html>

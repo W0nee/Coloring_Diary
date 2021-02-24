@@ -1,0 +1,183 @@
+#entire{
+    width: 360px;
+    height: 760px;
+    border: solid 3px #c9c9c9;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#menubar{
+    position: relative;
+    width: 100%;
+    top: -50;
+    left: 50;
+    opacity: 0.5;
+    text-align: center;
+    
+}
+#Backbutton{
+    display: block;
+    width: 24px;
+    height: 24px;
+    
+    margin-left: 30%;
+}
+#see{
+    width: 33%;
+    font-family: "Roboto", sans-serif;
+}
+#seerecord{
+    font-size: 151%;
+}
+#searchsearch{
+    width: 34%;
+    float: right;
+}
+#imoge{
+    margin-left: 30%;
+    width: 100%;
+}
+
+#reatltitle{
+  font-family: NotoSans;
+  font-size: 28px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  margin-left: 28%;
+  color: var(--test-color-4-f-4-f-4-f);
+
+}
+#detailplace{
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--test-color-6-fcf-97);
+    article 
+}
+
+#line{
+    width: 340px;
+}
+#날짜{
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    margin-left: 10%;
+    
+}
+#where{
+    width: 360px;
+    height: 760px;
+    font-family: Roboto;
+    font-size: 12px;
+    
+}
+
+/* /////////////////////////////////////// */
+
+#backimage{
+    width: 100%;
+}
+/* /////////////////////////////////////////////// */
+#infobar{
+    border-radius: 7%;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    top: -25%;
+    text-align: center;
+    background-color: white;
+    
+}
+#내용{
+    overflow: scroll;
+    width: 296px;
+    height: 391px;
+    margin: 30px 32px 0;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--test-color-4-f-4-f-4-f);
+}
+
+
+
+/* /////////////////////////////////////////////////// */
+
+
+
+/* ///////////////////////////////////////// */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////// */
+
+#navigationbar{
+    width: 100%;
+    height: 7%;
+    bottom: 0%;
+
+}
+
+#gohome{
+    float: left;
+    background-color: white;
+    width: 25%;
+    height: 45px;
+}
+#show{
+    background-color: white;
+    width: 25%;
+    height: 45px;
+}
+
+#write{
+    position: relative;
+    background-color: white;
+    width: 20%;
+    height: 45px;
+}
+
+#my{
+    background-color: white;
+    width: 25%;
+    height: 45px;
+}

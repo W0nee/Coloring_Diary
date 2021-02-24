@@ -1,0 +1,100 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+#LoginPageBlock {
+  width: 360px;
+  height: 760px;
+  border: solid 3px #c9c9c9;
+  background-color: #ffffff;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#LogoImgBlock {
+  width: 30%;
+  height: 15%;
+  border-radius: 10px;
+  background-color: #6fcf97;
+  margin-top: 30%;
+}
+
+#LogoBlock {
+  width: 24%;
+  height: 5%;
+  margin-top: 5%;
+}
+
+#btngroup {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#btngroup button:hover {
+  box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+#kakaoLogin {
+  width: 296px;
+  height: 40px;
+  background-color: #f6e24b;
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+  margin-top: 40%;
+  text-align: center;
+  cursor: pointer;
+}
+
+#naverLogin {
+  width: 296px;
+  height: 40px;
+  background-color: #5ab133;
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 6%;
+  cursor: pointer;
+}
+
+#googleLogin {
+  width: 296px;
+  height: 40px;
+  background-color: #f2f2f2;
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 6%;
+  cursor: pointer;
+}
+
+img.icon {
+  vertical-align: middle;
+  display: inline-block;
+  width: 7%;
+  height: 60%;
+  margin: 2% 10% 2% 2%;
+  background-color: transparent;
+}
+
+span.buttonText {
+  vertical-align: middle;
+  width: 36%;
+  height: 40%;
+  margin: 3% 0 3% 25%;
+  letter-spacing: normal;
+  color: red;
+}

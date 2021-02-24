@@ -5,7 +5,6 @@ let fileSchema = mongoose.Schema({
   originalFileName: { type: String },
   serverFileName: { type: String },
   size: { type: Number },
-  // uploadedBy: { type: mongoose.Schema.Types.ObjectId, ref: "user", required: true },
   postId: { type: mongoose.Schema.Types.ObjectId, ref: "diarys" },
   isDeleted: { type: Boolean, default: false },
 });

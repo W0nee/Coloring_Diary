@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/css/write.css">
+        <link rel="stylesheet" href="/css/navigator.css">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+        </style>
+    </head>
+    <body>
+        <div id="RecordPageBlock">
+            <div id="TitleBlock">
+                <button onclick="history.back()" id="backbtn">
+                    <img src="/images/chevronLeft.svg" alt="back"/>
+                </button>
+                <span class="titleText">여행 기록하기</span>
+                <!-- <button id="savebtn">
+                    <img src="/images/checkCircle.svg" alt="save"/>
+                </button> -->
+            </div>
+            
+            <form action="/diary/save" enctype="multipart/form-data" method="post">
+              <input type="text" name="start_date" placeholder="여행 시작일"></input>
+              <input type="text" name="finish_date" placeholder="여행 종료일"></input>
+              <input type="text" name="title" placeholder="제목을 입력하세요"></input>
+              <input type="text" name="location" placeholder="장소를 입력하세요"></input>
+              <textarea name="content" placeholder="내용을 입력하세요"></textarea>
+              <!-- 체크박스 이미지화 -->
+              <input type="checkbox" name="emotion" value="happy">happy</input>
+              <input type="checkbox" name="emotion" value="sad">sad</input>
+              <input type="checkbox" name="emotion" value="soso">soso</input>
+              <input type="checkbox" name="emotion" value="frown">frown</input>
+              <input type="checkbox" name="emotion" value="angry">angry</input>
+              <!-- 파일창 이미지화 -->
+              <input type="file" name="attachment" accept=".gif, .jpg, .png" multiple />
+              <button type="submit">전송</button>
+            </form>
+          
+          <div id="btngroup">
+              <button class="home">홈</button>
+              <button class="write">모아보기</button>
+              <button class="see">기록하기</button>
+              <button class="myPage">마이페이지</button>
+          </div>
+        </div>
+    </body>
+</html>
